@@ -1,0 +1,49 @@
+project_root: .
+data_dir: data
+results_dir: results
+device: auto
+force: false
+
+data:
+  dataset: mnist
+  binarization: static_bernoulli
+  binarization_seed: 2026
+  num_workers: 2
+
+model:
+  z_dim: 3
+  hidden_dim: 100
+  init_std: 0.01
+
+training:
+  optimizer: adagrad
+  lr:
+  lr_candidates: [0.01, 0.02, 0.1]
+  batch_size: 100
+  epochs: 50
+  eval_every: 5
+  checkpoint_epochs: [1, 5, 10, 20, 30, 50]
+  checkpoint_every: 0
+  eval_samples: 1
+  map_l2_scale: 1_over_n
+  weight_updates_per_sample: 3
+  resume: true
+
+hmc:
+  posterior_steps: 5
+  leapfrog_steps: 5
+  target_acceptance: 0.90
+  initial_step_size: 0.05
+
+marginal_likelihood:
+  max_points: 200
+  posterior_samples: 30
+  burn_in: 30
+  leapfrog_steps: 4
+  target_acceptance: 0.90
+  initial_step_size: 0.05
+  chunk_size: 100
+
+experiment:
+  n_train_values: [1000]
+  seeds: [0]

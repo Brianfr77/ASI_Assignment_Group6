@@ -1,0 +1,38 @@
+project_root: .
+data_dir: data
+results_dir: results_debug
+device: auto
+force: true
+
+data:
+  dataset: mnist
+  binarization: static_bernoulli
+  binarization_seed: 2026
+  num_workers: 0
+
+model:
+  hidden_dim: 64
+  init_std: 0.01
+
+training:
+  optimizer: adagrad
+  lr: 0.01
+  lr_candidates: [0.01, 0.02, 0.1]
+  batch_size: 64
+  epochs: 3
+  eval_every: 1
+  checkpoint_every: 1
+  eval_samples: 1
+  map_l2_scale: 1_over_n
+  resume: true
+
+pilot:
+  z_dim: 10
+  seed: 0
+  epochs: 2
+
+experiment:
+  z_dims: [3]
+  qualitative_z_dims: [2]
+  qualitative_seeds: [0]
+  seeds: [0]
