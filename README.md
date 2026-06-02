@@ -23,6 +23,11 @@ pip install -e .
 
 Run commands from the repository root.
 
+## Notebooks
+
+- `notebooks/AEVB_MNIST_Reproduction_v3_colab.ipynb`: clean Colab notebook for rerunning the full suite.
+- `notebooks/AEVB_MNIST_Reproduction_v3_colab_executed.ipynb`: sanitized Colab notebook with saved output evidence from the completed run.
+
 ## Recommended Run
 
 The suite runner executes the smoke test, pilot, AEVB sweep, Wake-Sleep, marginal likelihood, figures, result tables, and a backup after every stage:
