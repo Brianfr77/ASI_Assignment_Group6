@@ -7,11 +7,9 @@ It is intended to contain all resources needed by the instructor or a teammate t
 ## Contents
 
 - `README.md`: main project README and run commands.
-- `AEVB_Experiment_Handoff_Report.md`: detailed experiment handoff notes.
 - `configs/`: fixed YAML configurations for AEVB, Wake-Sleep, marginal likelihood, and smoke tests.
 - `scripts/`: CLI entry points for running the experiments and collecting figures/tables.
 - `src/aevb_v3/`: implementation of data loading, VAE, ELBO, Wake-Sleep, HMC, MCEM, plotting, and result collection.
-- `tests/`: lightweight local test package.
 - `notebooks/AEVB_MNIST_Reproduction_v3_colab.ipynb`: clean Colab notebook.
 - `notebooks/AEVB_MNIST_Reproduction_v3_colab_executed.ipynb`: Colab notebook copy with saved output evidence.
 - `results/metrics/`: CSV training curves and marginal-likelihood estimates.
